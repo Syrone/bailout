@@ -1,0 +1,8 @@
+<svg id='svg-menu' viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_4001_100" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+<rect y="0.5" width="20" height="20" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_4001_100)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.5C0 9.80964 0.559644 9.25 1.25 9.25H18.75C19.4404 9.25 20 9.80964 20 10.5C20 11.1904 19.4404 11.75 18.75 11.75H1.25C0.559644 11.75 0 11.1904 0 10.5ZM5 4.25C5 3.55964 5.55964 3 6.25 3H18.75C19.4404 3 20 3.55964 20 4.25C20 4.94036 19.4404 5.5 18.75 5.5H6.25C5.55964 5.5 5 4.94036 5 4.25ZM10 16.75C10 16.0596 10.5596 15.5 11.25 15.5H18.75C19.4404 15.5 20 16.0596 20 16.75C20 17.4404 19.4404 18 18.75 18H11.25C10.5596 18 10 17.4404 10 16.75Z" fill="currentColor"/>
+</g>
+</svg>

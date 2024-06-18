@@ -1,0 +1,58 @@
+.accordion {
+
+	&.is-open {
+
+		.accordion__btn {
+			--_color: var(--primary-color);
+		}
+
+		.accordion__body {
+			max-height: 100rem;
+		}
+	}
+
+	&__btn {
+		--_icon-size: 2rem;
+
+		position: relative;
+
+		.icon {
+			position: absolute;
+			right: -2.5rem;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__body {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height calc(var(--transition-duration) * 2) var(--transition-type);
+	}
+
+	&__content {
+		margin-block: 1.5rem;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+
+		&-item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&-link {
+			--_width: fit-content;
+			--_font-size: var(--fs-xl);
+			--_font-weight: 700;
+
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+}

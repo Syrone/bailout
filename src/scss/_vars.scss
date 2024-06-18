@@ -1,0 +1,56 @@
+:root {
+  // base
+  --font-family: "Roboto", sans-serif;
+  --font-title: "Oswald", sans-serif;
+  --content-width: 80.625rem;
+  --container-offset: 1rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  
+  // font-size
+  --h1: 3rem;
+  --h2: 2.875rem;
+  --h3: 2rem;
+  --h4: 1.75rem;
+  --h5: 1.5rem;
+
+  --fs: 1rem;
+  --fs-xs: .75rem;
+  --fs-sm: .875rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.375rem;
+  --fs-xxl: 1.5rem;
+
+  // line-height
+  --lh: 1.25;
+  --lh-normal: normal;
+  --lh-1: 1;
+  --lh-2: 1.375;
+  --lh-3: 1.5;
+  --lh-4: 1.75;
+  --lh-5: 2;
+
+  // colors
+  --primary-color: #91C75D;
+  --primary-color--light: #82B453;
+  --secondary-color: #142E51;
+  --dark-color: #000;
+  --light-color: #fff;
+  --gray-color: #E8EBEE;
+  --gray-color--light: #D5D9DE;
+  --gray-color--lighter: #EFEEEE;
+  --text-color: #2B2B2B;
+
+  // background
+  --background: #fff;
+  --background-gray: #E8EBEE;
+
+  // radius
+  --radius: 1rem;
+  --radius-sm: .625rem;
+  --radius-lg: 1.25rem;
+
+  // transition
+  --transition-duration: 300ms;
+  --transition-type: ease-in-out;
+}

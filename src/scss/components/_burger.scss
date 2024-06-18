@@ -1,0 +1,136 @@
+.burger {
+	--_icon-size: 1.25rem;
+
+	display: none;
+}
+
+.menu {
+	display: none;
+	flex-direction: column;
+	width: 100%;
+	max-width: 30rem;
+	height: 100%;
+	background-color: var(--background);
+	padding: var(--container-offset);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	transform: translateX(100%);
+	transition: transform var(--transition-duration) var(--transition-type);
+
+	&--active {
+		transform: initial;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.25rem;
+	}
+
+	&__phone {
+		margin-left: auto;
+	}
+
+	&__main {
+		flex: 1;
+		margin-top: .75rem;
+	}
+
+	&__nav {
+		max-height: 32rem;
+		background-color: #f8f9fa;
+		margin-bottom: 1.5rem;
+		border-radius: var(--radius-lg);
+		padding: 2.5rem 1rem;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	&__logo {
+		.image {
+			height: 3rem;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+
+		.accordion,
+		&-item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.accordion {
+			flex-direction: column;
+		}
+
+		&-link {
+			--_font-size: var(--fs-xxl);
+			--_font-weight: 700;
+
+			text-transform: uppercase;
+		}
+	}
+
+	&__address {
+		max-width: 18rem;
+		display: flex;
+		flex-direction: column;
+		gap: .875rem;
+		font-family: var(--font-title);
+		font-size: var(--fs-lg);
+		font-weight: 700;
+		margin-inline: auto;
+
+		&-item {
+			display: flex;
+			align-items: center;
+			gap: .75rem;
+		}
+
+		&-icon {
+			--_i-size: 2rem;
+			--_i-color: var(--light-color);
+
+			background-color: var(--primary-color);
+			border-radius: 50%;
+			padding: .25rem;
+		}
+	}
+
+	&__yandex {
+		margin: 1.5rem auto;
+	}
+
+	&__text {
+		font-size: var(--fs-lg);
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	&__btn {
+		--_width: 100%;
+	}
+}
+
+[data-menu-overlay] {
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+}
+
+[data-menu-overlay="true"] {
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 9;
+}
