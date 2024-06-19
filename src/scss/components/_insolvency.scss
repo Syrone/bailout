@@ -1,0 +1,146 @@
+.insolvency {
+	max-width: 93.75rem;
+	margin-inline: auto;
+	border-radius: 3rem;
+	padding: 4.75rem 0;
+	box-shadow: 0 -3px 30px 0 rgba(20, 46, 81, 0.05);
+	background-color: var(--background);
+	position: relative;
+	z-index: 1;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		margin-bottom: 2.75rem;
+
+		.insolvency__title {
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 2.25rem;
+	}
+
+	&__achieved {
+		width: 100%;
+		max-width: 18rem;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		font-size: var(--fs-sm);
+
+		&-current {
+			display: flex;
+			align-items: center;
+			gap: .375rem;
+			font-family: var(--font-title);
+			font-size: var(--h1);
+			position: relative;
+
+			&::after,
+			&::before {
+				content: '';
+				display: block;
+				width: 1.75rem;
+				height: 3.875rem;
+				flex-shrink: 0;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+			}
+
+			&::after {
+				background-image: url(../img/decor/crown-right.svg);
+			}
+			&::before {
+				background-image: url(../img/decor/crown-left.svg);
+			}
+		}
+	}
+
+	&__main {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		background-color: var(--background-gray);
+		border-radius: 2rem;
+		padding: .625rem;
+
+		&-start {
+			max-width: 48rem;
+			height: 100%;
+			padding: 4rem 0 2.75rem 4.375rem;
+		}
+
+		&-end {
+			width: 100%;
+			max-width: 32rem;
+
+			.insolvency__contacts {
+				display: none;
+			}
+		}
+	}
+
+	&__quastion {
+		max-width: 37.5rem;
+		display: flex;
+		align-items: flex-start;
+		gap: 1rem;
+		margin-bottom: 4.5rem;
+
+		&-icon {
+			width: 3rem;
+			height: 3rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: var(--font-title);
+			font-size: var(--fs-xxl);
+			font-weight: 700;
+			color: var(--primary-color);
+			background-color: var(--background);
+			border-radius: 50%;
+			flex-shrink: 0;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 1rem;
+
+		&-list {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: .25rem;
+
+			&_whatsapp,
+			&_telegram {
+				--_color: var(--light-color);
+				--_border-radius: 50%;
+				--_padding: .5rem;
+
+				--_color-active: var(--light-color);
+				--_color-focus: var(--light-color);
+			}
+
+			&_whatsapp {
+				--_background-color: var(--primary-color);
+				--_background-color-active: var(--primary-color);
+				--_background-color-focus: var(--primary-color);
+			}
+
+			&_telegram {
+				--_background-color: var(--secondary-color);
+				--_background-color-active: var(--secondary-color);
+				--_background-color-focus: var(--secondary-color);
+			}
+		}
+	}
+}
