@@ -1,6 +1,18 @@
 /** > 1400px **/
 @media (max-width: 87.5rem) {
 
+	// hero
+	.hero {
+
+		&__start {
+			max-width: 44rem;
+		}
+
+		&__picture {
+			width: clamp(42rem, 60vw, 50rem);
+		}
+	}
+
 }
 
 /** > 1200px **/
@@ -41,6 +53,18 @@
 		}
 	}
 
+	// hero 
+	.hero {
+
+		&__picture {
+			left: -12vw;
+		}
+
+		&__info {
+			top: 26rem;
+		}
+	}
+
 }
 
 /** > 992px **/
@@ -58,6 +82,85 @@
 		}
 	}
 
+	// hero
+	.hero {
+		padding-block: 2.25rem;
+		
+		&__container {
+			min-height: auto;
+		}
+
+		&__title,
+		&__text {
+			margin-inline: auto;
+			text-align: center;
+		}
+
+		&__text {
+			margin-bottom: 1.875rem;
+		}
+
+		&__btn {
+			display: flex;
+			margin: 0 auto 2.25rem;
+		}
+
+		&__start {
+			max-width: 100%;
+		}
+
+		&__end {
+			width: auto;
+		}
+
+		&__picture {
+			width: 20rem;
+			top: auto;
+			left: -12rem;
+			bottom: -12rem;
+		}
+
+		&__info {
+			width: auto;
+			background-color: transparent;
+			padding: 0;
+			top: auto;
+			bottom: 0;
+			right: .375rem;
+
+			&-title {
+				width: max-content;
+				margin-left: auto;
+				background-color: var(--background);
+				border-radius: .25rem;
+				padding: .25rem .375rem;
+				margin-bottom: 0;
+
+				&::after {
+					all: initial;
+				}
+			}
+
+			&-text {
+				width: 12.25rem;
+				background-color: rgba(252, 252, 252, .9);
+				margin-top: -.25rem;
+				border-radius: .25rem;
+				padding: .25rem .375rem;
+			}
+
+			&-hint {
+				display: none;
+			}
+		}
+
+		&-swiper {
+			max-width: calc(100% - 12rem);
+			margin-inline: 0;
+		}
+
+	}
+
 }
 
 /** > 768px **/
@@ -65,6 +168,14 @@
 
 	:root {
 		--h1: 1.25rem;
+	}
+
+	// backgrounds
+	.background {
+
+		&-inner {
+			border-radius: var(--radius-lg);
+		}
 	}
 
 	// buttons
@@ -147,6 +258,57 @@
 			.image {
 				height: 3.125rem;
 			}
+		}
+
+		&__text {
+			font-size: var(--fs-sm);
+		}
+	}
+
+	// hero
+	.hero {
+
+		&__title,
+		&__text {
+			max-width: 20rem;
+		}
+
+		&__text {
+			font-size: var(--fs);
+		}
+
+		&__picture {
+			width: 18rem;
+			left: -10rem;
+			bottom: -8rem;
+		}
+
+		&__info {
+
+			&-title {
+				font-size: var(--fs-sm);
+			}
+
+			&-text {
+				width: 9.375rem;
+				font-size: .75rem;
+			}
+		}
+
+		&-swiper {
+			max-width: calc(100% - 7rem);
+		}
+	}
+
+	// features
+	.feature {
+
+		&__picture {
+			height: 3.75rem;
+		}
+
+		&__title {
+			font-size: var(--fs);
 		}
 
 		&__text {

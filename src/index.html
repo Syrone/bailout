@@ -7,7 +7,94 @@
   <div class="site-container">
     @include('partials/header.html')
     <main class="main">
-      
+      <h1 class="visually-hidden">
+        Главная
+      </h1>
+
+      <div class="background">
+        <div class="background-inner">
+          <section class="section hero">
+            <div class="container hero__container">
+              <div class="hero__start">
+                <h2 class="h1 hero__title">
+                  Начните жизнь с чистого листа без долгов, коллекторов, постоянного психологического давления
+                </h2>
+                <p class="hero__text">
+                  Законно <span class="secondary-color fw-700">спишем 100%</span> ваших задолженностей перед банками и кредиторами <span class="primary-color fw-700">бесплатно</span> <span class="secondary-color fw-700">через МФЦ</span>
+                </p>
+                <button type="button" class="btn btn-lg btn-primary hero__btn">
+                  получить консультацию
+                </button>
+
+                <div class="swiper hero-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="feature">
+                        <picture class="feature__picture">
+                          <source srcset="./img/features/feature-1.webp" type="image/webp">
+                          <img loading="lazy" src="./img/features/feature-.png" class="feature__image" width="121" height="110" alt="">
+                        </picture>
+                        <h3 class="feature__title">
+                          Без суда и вашего участия в процессе
+                        </h3>
+                        <p class="feature__text">
+                          После заключения договора оформляем доверенность на представительство
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="feature">
+                        <picture class="feature__picture">
+                          <source srcset="./img/features/feature-2.webp" type="image/webp">
+                          <img loading="lazy" src="./img/features/feature-.png" class="feature__image" width="121" height="110" alt="">
+                        </picture>
+                        <h3 class="feature__title">
+                          6 месяцев
+                        </h3>
+                        <p class="feature__text">
+                          Среднний срок процесса банкротства
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="feature">
+                        <picture class="feature__picture">
+                          <source srcset="./img/features/feature-3.webp" type="image/webp">
+                          <img loading="lazy" src="./img/features/feature-.png" class="feature__image" width="121" height="110" alt="">
+                        </picture>
+                        <h3 class="feature__title">
+                          от 25 000 до 1 млн рублей
+                        </h3>
+                        <p class="feature__text">
+                          можно списать бесплатно во внесудемном порядке через МФЦ в <a href="#" class="btn btn-link">соответствии с ФЗ 127</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div class="hero__end">
+                <picture class="hero__picture">
+                  <source srcset="./img/hero/hero.webp" type="image/webp">
+                  <img loading="lazy" src="./img/hero/hero.png" class="hero__image" width="655" height="1198" alt="Картинка">
+                </picture>
+                <div class="hero__info">
+                  <h3 class="hero__info-title">
+                    Камиль исаев
+                  </h3>
+                  <p class="hero__info-text">
+                    Эксперт по банкротству, генеральный директор
+                  </p>
+                  <p class="hero__info-hint">
+                    Помог списать долги <span class="secondary-color fw-700">более 100 человек</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
     @include('partials/footer.html')
   </div>

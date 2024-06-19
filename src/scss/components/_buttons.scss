@@ -94,6 +94,17 @@
 	--_color: inherit;
 }
 
+.btn-link {
+	--_width: auto;
+	--_font-size: inherit;
+	--_font-weight: 700;
+	--_line-height: inherit;
+	--_color: var(--secondary-color);
+
+	display: inline-flex;
+	text-decoration: underline;
+}
+
 .btn-phone {
 	--_font-size: var(--fs-xxl);
 	--_font-weight: 700;

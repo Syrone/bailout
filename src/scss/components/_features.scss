@@ -1,0 +1,21 @@
+.feature {
+
+	&__picture {
+		width: auto;
+		height: 6.875rem;
+		display: block;
+		margin-bottom: .5rem;
+	}
+
+	&__image {
+		width: auto;
+		height: 100%;
+		display: block;
+		object-fit: contain;
+	}
+
+	&__title {
+		font-size: var(--fs-lg);
+		margin-bottom: .625rem;
+	}
+}

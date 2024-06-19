@@ -1,0 +1,10 @@
+.swiper {
+	--swiper-theme-color: var(--primary-color);
+	--swiper-pagination-bullet-inactive-color: var(--secondary-color);
+	--swiper-pagination-bullet-inactive-opacity: 1;
+
+	&-pagination {
+		position: static;
+		text-align: left;
+	}
+}
