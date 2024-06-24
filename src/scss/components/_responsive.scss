@@ -1,15 +1,37 @@
 /** > 1520px **/
 @media (max-width: 95rem) {
+
 	// insolvency
 	.insolvency {
 		width: calc(100% + var(--container-offset) * 2);
 		max-width: unset;
 		margin-inline: calc(var(--container-offset) * -1);
 	}
+
+	// law
+	.law {
+
+		&--background {
+			background-position: left center;
+		}
+
+		&--inverse {
+
+			.law__inner {
+				gap: 3rem;
+			}
+
+			.law__content {
+				width: calc(100% - 27.75rem);
+			}
+		}
+	}
+
 }
 
 /** > 1400px **/
 @media (max-width: 87.5rem) {
+
 	// hero
 	.hero {
 		&__start {
@@ -29,6 +51,22 @@
 			}
 		}
 	}
+
+	// law
+	.law {
+
+		&--inverse {
+
+			.law__inner {
+				gap: 2rem;
+			}
+
+			.law__content {
+				width: calc(100% - 26.75rem);
+			}
+		}
+	}
+
 }
 
 /** > 1200px **/
@@ -38,6 +76,41 @@
 		.icon,
 		&__text {
 			display: none;
+		}
+	}
+
+	// swipers
+	.resizable-swiper {
+		margin-inline: calc(var(--container-offset) * 2 * -1);
+		padding-inline: calc(var(--container-offset) * 2);
+
+		&__slide {
+			--_background-color: var(--background);
+			--_border-radius: var(--radius-sm);
+			--_padding: 1.25rem .5rem;
+
+			--_background-color-active: var(--_background-color);
+			--_background-color-focus: var(--_background-color);
+
+			box-shadow: 0 -3px 30px 0 rgba(20, 46, 81, 0.05);
+
+			&--transparent {
+				--_background-color: transparent;
+				--_padding: 0;
+
+				box-shadow: unset;
+			}
+		}
+
+		&--triple {
+
+			.swiper-slide {
+				width: 100%;
+			}
+
+			.swiper-pagination {
+				text-align: center;
+			}
 		}
 	}
 
@@ -74,6 +147,69 @@
 
 		&__info {
 			top: 26rem;
+		}
+	}
+
+	// law
+	.law {
+
+		.section-header {
+			margin-bottom: 2.5rem;
+			text-align: center;
+		}
+		
+		&__picture {
+			width: 16.64rem;
+			height: 18rem;
+			top: auto;
+			left: auto;
+			right: -4rem;
+			bottom: -6rem;
+		}
+
+		&-swiper {
+			max-width: 60%;
+
+			&__slide {
+				flex-direction: column;
+			}
+
+			.swiper-pagination {
+				margin-top: 1rem;
+			}
+		}
+
+		&--background {
+			background-position: center;
+		}
+
+		&--inverse {
+
+			.law__inner {
+				flex-direction: column-reverse;
+			}
+
+			.law__card {
+				margin-inline: auto;
+			}
+
+			.law__content {
+				width: 100%;
+			}
+
+			.law-swiper {
+				max-width: 21rem;
+				margin-inline: auto;
+
+				&__slide {
+					align-items: center;
+					text-align: center;
+				}
+
+				.swiper-pagination {
+					text-align: center;
+				}
+			}
 		}
 	}
 }
@@ -241,6 +377,23 @@
 		--h3: 1rem;
 	}
 
+	// sections
+	.section {
+		margin-bottom: 2.5rem;
+
+		&-header {
+			margin-bottom: 1rem;
+		}
+
+		&-title {
+			font-size: var(--fs);
+		}
+
+		&-text {
+			font-size: var(--fs-sm);
+		}
+	}
+
 	// backgrounds
 	.background {
 		&-inner {
@@ -313,6 +466,25 @@
 	.logo {
 		.image {
 			height: 1.875rem;
+		}
+	}
+
+	// swipers
+	.resizable-swiper {
+
+		&__slide {
+			--_width: 9.375rem;
+			--_font-size: var(--fs-sm);
+			--_padding: .5rem .5rem 1rem;
+
+			&--transparent {
+				--_padding: 0;
+			}
+
+			&-image--full {
+				width: 9.375rem;
+				height: 9.375rem;
+			}
 		}
 	}
 
@@ -478,6 +650,75 @@
 		}
 	}
 
+	// law
+	.law {
+
+		&__picture {
+			width: 14.1875rem;
+			height: 15.375rem;
+			right: -4rem;
+			bottom: -4rem;
+		}
+
+		.section-header {
+			gap: 1rem;
+		}
+
+		&-swiper {
+			font-size: var(--fs-sm);
+
+			&__slide-icon {
+				--_i-size: 1.25rem;
+			}
+		}
+
+		&--background {
+			padding-block: 4rem 0;
+			background-size: 50vw;
+		}
+
+		&--inverse {
+
+			.law__card {
+				border-radius: var(--radius-lg);
+				padding: 1.25rem 1.125rem 2rem;
+
+				&-title--bigger {
+					font-size: 3rem;
+				}
+
+				&-text {
+					font-size: var(--fs-sm);
+				}
+			}
+
+			.law-swiper__slide {
+				gap: .625rem;
+
+				&-title {
+					font-size: var(--fs);
+				}
+			}
+		}
+	}
+
+	// key
+	.key-card {
+		padding: 0 1rem;
+
+		&__image {
+			height: 6.25rem;
+		}
+
+		&__title {
+			font-size: var(--fs);
+		}
+
+		&__text {
+			font-size: var(--fs-sm);
+		}
+	}
+
 	// footer
 	.footer {
 		padding-block: 1.5rem 2.5rem;
@@ -530,6 +771,11 @@
 	// menu
 	.menu {
 		max-width: 100%;
+	}
+
+	// law
+	.law--background {
+		background-size: contain;
 	}
 
 }

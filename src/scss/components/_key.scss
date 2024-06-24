@@ -1,0 +1,19 @@
+.key-card {
+	text-align: center;
+
+	&__picture {
+		display: block;
+	}
+
+	&__image {
+		height: 12.5rem;
+		object-fit: contain;
+	}
+
+	&__title {
+		max-width: 21rem;
+		margin-inline: auto;
+		margin-bottom: .625rem;
+		font-size: var(--fs-xxl);
+	}
+}
