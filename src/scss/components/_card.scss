@@ -1,0 +1,152 @@
+.key-card {
+	text-align: center;
+
+	&__picture {
+		display: block;
+	}
+
+	&__image {
+		height: 12.5rem;
+		object-fit: contain;
+	}
+
+	&__title {
+		max-width: 21rem;
+		margin-inline: auto;
+		margin-bottom: .625rem;
+		font-size: var(--fs-xxl);
+	}
+}
+
+.exactly-card,
+.exactly-form {
+	background-color: var(--background);
+	border-radius: var(--radius-lg);
+}
+
+.exactly-card {
+	width: 18.75rem;
+	min-height: 20rem;
+	height: 100%;
+	text-align: center;
+	padding: 2.5rem 1.875rem;
+	
+	&__text + .exactly-card__text {
+		margin-top: 1.25rem;
+	}
+}
+
+.exactly-form {
+	justify-content: space-between;
+	margin-top: 1.875rem;
+	padding: 3.125rem;
+
+	&__title,
+	&__hint {
+		max-width: 15rem;
+		margin-bottom: 0;
+	}
+
+	&__hint {
+		font-size: var(--fs-sm);
+	}
+
+	&,
+	&__start,
+	&__end {
+		display: flex;
+		align-items: center;
+		gap: 1.875rem;
+	}
+
+	&__start,
+	&__end,
+	&__submit,
+	.form-field {
+		flex: 1;
+	}
+}
+
+.video-card {
+	width: 100%;
+	max-width: 25.625rem;
+
+	&__btn {
+		--_width: 100%;
+		--_height: 30rem;
+		--_color: var(--primary-color);
+		--_border-radius: var(--radius-xxl);
+		--_padding: 1rem;
+
+		--_icon-size: 7.5rem;
+
+		--_color-active: var(--secondary-color);
+		--_color-focus: var(--secondary-color);
+
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	&__info,
+	&__row {
+		width: 100%;
+		display: flex;
+	}
+
+	&__info {
+		flex-direction: column;
+		gap: 1.25rem;
+		margin-top: 1.25rem;
+	}
+
+	&__row {
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
+	&__title {
+		margin-bottom: 0;
+	}
+
+	&__case {
+		text-transform: uppercase;
+	}
+
+	&__value {
+		white-space: nowrap;
+
+		&--primary {
+			font-size: var(--fs-lg);
+			font-weight: 700;
+			color: var(--primary-color);
+		}
+	}
+}
+
+.personnel-card {
+
+	&__picture {
+		display: block;
+		margin-bottom: 1.25rem;
+	}
+
+	&__image {
+		width: 100%;
+		height: 28.125rem;
+		display: block;
+		border-radius: var(--radius-lg);
+	}
+
+	&__info {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: .625rem;
+	}
+
+	&__title {
+		margin-bottom: 0;
+	}
+}

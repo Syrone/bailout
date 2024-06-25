@@ -1,0 +1,16 @@
+.personnel-swiper {
+	margin-top: -2rem;
+	padding-top: 2rem;
+
+	.swiper-slide {
+		transition: transform var(--transition-duration) var(--transition-type);
+	}
+
+	.swiper-slide-active {
+		transform: scale(1.075);
+	}
+
+	.swiper-pagination {
+		width: auto;
+	}
+}

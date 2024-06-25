@@ -1,0 +1,57 @@
+.graph-modal {
+
+	&__container {
+		width: calc(100% - var(--container-offset) * 2);
+		max-width: 32.5rem;
+		border-radius: var(--radius-lg);
+		padding: 2.5rem 2rem;
+
+		&--quiz {
+			max-width: 84.375rem;
+			background-color: transparent;
+			padding: 0;
+
+			.insolvency__main {
+				padding: 2.5rem;
+			}
+		}
+	}
+
+	&__close {
+		background-image: unset;
+		top: 1.25rem;
+		right: 1.25rem;
+	}
+
+	&__form {
+		text-align: center;
+
+		&-title {
+			margin-bottom: .5rem;
+		}
+
+		&-text {
+			margin-bottom: 2rem;
+		}
+
+		.form-field,
+		&-submit {
+			margin-bottom: .625rem;
+		}
+
+		&-field {
+			text-align: center;
+		}
+
+		&-submit {
+			--_width: 100%;
+			--_padding: .25rem;
+		}
+
+		&-hint {
+			max-width: 20rem;
+			margin-inline: auto;
+			font-size: var(--fs-xs);
+		}
+	}
+}

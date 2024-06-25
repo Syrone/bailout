@@ -1,0 +1,54 @@
+.address {
+	max-width: 100rem;
+	margin-inline: auto;
+	font-size: var(--fs-lg);
+	margin-bottom: 6.25rem;
+	padding-inline: var(--container-offset);
+
+	&__inner,
+	&__details {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 3rem;
+	}
+
+	&__inner {
+		background-color: #F8F9FA;
+		border-radius: var(--radius-xxl);
+		padding: 2.5rem max(var(--container-offset), (100% - var(--content-width)) / 2);
+	}
+
+	&__callback {
+		max-width: 30rem;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: .625rem;
+
+		&-link {
+			--_font-size: 2.25rem;
+			--_font-weight: 700;
+
+			--_icon-size: 2.5rem;
+
+			font-family: var(--font-title);
+			gap: 1.25rem;
+		}
+	}
+
+	&__details {
+		
+		&-item {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			font-family: var(--font-title);
+			font-weight: 700;
+
+			.icon {
+				--_i-size: 2.5rem;
+			}
+		}
+	}
+}

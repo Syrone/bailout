@@ -1,18 +1,18 @@
-import Swiper, { Pagination } from 'swiper';
-Swiper.use([Pagination]);
+import Swiper, { Pagination, Navigation } from 'swiper';
+Swiper.use([Pagination, Navigation]);
 
 const resizableSwiper = (breakpoint, swiperClass, swiperConfig, callback) => {
 	let swiper
 
 	breakpoint = window.matchMedia(breakpoint)
 
-	const enableSwiper = function(className, settings) {
+	const enableSwiper = function (className, settings) {
 		swiper = new Swiper(className, settings)
-		
+
 		if (callback) callback(swiper)
 	}
 
-	const checker = function() {
+	const checker = function () {
 		if (breakpoint.matches) {
 			return enableSwiper(swiperClass, swiperConfig)
 		} else {
@@ -26,9 +26,9 @@ const resizableSwiper = (breakpoint, swiperClass, swiperConfig, callback) => {
 }
 
 const heroSwipers = document.querySelectorAll('.hero-swiper'),
-			resizableSwipers = document.querySelectorAll('.resizable-swiper'),
-			resizableTripleSwipers = document.querySelectorAll('.resizable-swiper--triple'),
-			lawSwipers = document.querySelectorAll('.law-swiper')
+	resizableSwipers = document.querySelectorAll('.resizable-swiper'),
+	lawSwipers = document.querySelectorAll('.law-swiper'),
+	personnelSwipers = document.querySelectorAll('.personnel-swiper')
 
 heroSwipers?.forEach((el) => {
 	const pagination = el.querySelector('.swiper-pagination')
@@ -133,4 +133,56 @@ lawSwipers?.forEach((el) => {
 			}
 		}
 	)
+})
+
+personnelSwipers?.forEach((el) => {
+	const prev = el.querySelector('.swiper-button-prev'),
+		pagination = el.querySelector('.swiper-pagination'),
+		next = el.querySelector('.swiper-button-next')
+
+	let isMobile = window.innerWidth <= 1200;
+
+	const formatNumber = (number) => {
+		return number.toString().padStart(2, '0');
+	};
+
+	const swiper = new Swiper(el, {
+		slidesPerView: 3.25,
+		spaceBetween: 30,
+		watchSlidesProgress: true,
+		pagination: {
+			el: pagination,
+			clickable: true,
+			type: isMobile ? 'bullets' : 'custom',
+			renderCustom: (swiper, current, total) => {
+				return `<span class="swiper-pagination-custom"><span class="swiper-pagination-custom-current">${formatNumber(current)}</span> / ${formatNumber(total)}</span>`;
+			}
+		},
+		navigation: {
+			nextEl: next,
+			prevEl: prev,
+		},
+
+		breakpoints: {
+			0: {
+				slidesPerView: 'auto',
+				spaceBetween: 10
+			},
+			768: {
+				slidesPerView: 'auto',
+				spaceBetween: 24
+			},
+			1200: {
+				slidesPerView: 3.25,
+				spaceBetween: 30
+			}
+		}
+	})
+
+	window.addEventListener('resize', () => {
+		isMobile = window.innerWidth <= 1200;
+		swiper.params.pagination.type = isMobile ? 'bullets' : 'custom';
+		swiper.pagination.update();
+	});
+
 })

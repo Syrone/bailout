@@ -1,7 +1,11 @@
+.accodtion-section {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
 .accordion {
-
 	&.is-open {
-
 		.accordion__btn {
 			--_color: var(--primary-color);
 		}
@@ -53,6 +57,34 @@
 
 			text-align: center;
 			text-transform: uppercase;
+		}
+	}
+}
+
+@media (min-width: 75rem) {
+	.accordion-group--resizable {
+		.accordion {
+
+			&.is-open {
+
+				.accordion__btn {
+					--_color: var(--secondary-color);
+				}
+			}
+
+			.accordion__btn {
+				--_color-active: var(--_color);
+				--_color-focus: var(--_color);
+
+				.icon {
+					display: none;
+				}
+			}
+
+			.accordion__body {
+				height: 100%;
+				max-height: 100rem;
+			}
 		}
 	}
 }

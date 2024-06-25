@@ -9,6 +9,8 @@
 		margin-bottom: 4rem;
 
 		&--center {
+			max-width: 66rem;
+			margin-inline: auto;
 			justify-content: center;
 			text-align: center;
 		}
@@ -20,5 +22,17 @@
 
 	&-text {
 		font-size: var(--fs-xxl);
+	}
+
+	&-bottom {
+		display: flex;
+		justify-content: center;
+		margin-top: 2.5rem;
+
+		&__more.btn {
+			--_width: 100%;
+
+			max-width: 20rem;
+		}
 	}
 }
