@@ -113,6 +113,7 @@
 		}
 	}
 
+
 	// swipers
 	.resizable-swiper {
 		margin-inline: calc(var(--container-offset) * 2 * -1);
@@ -165,6 +166,37 @@
 	// accordion
 	.accodtion-section {
 		background-position: top center;
+	}
+
+	.accordion-group--resizable {
+		grid-template-columns: 1fr;
+
+		.accordion {
+	
+			&.is-open {
+	
+				.accordion__btn .icon {
+					transform: rotateX(180deg);
+				}
+			}
+	
+			&__btn {
+				--_width: 100%;
+				justify-content: space-between;
+				margin-bottom: 0;
+	
+				.icon {
+					position: static;
+					transform: initial;
+				}
+			}
+
+			&__content {
+				margin-top: 1.25rem;
+				border-top: 1px solid rgba($color: #142E51, $alpha: .1);
+				padding-top: 1.25rem;
+			}
+		}
 	}
 
 	// burger
@@ -291,36 +323,11 @@
 	
 	// canceled
 	.canceled-group {
-		grid-template-columns: 1fr;
 
 		&.accordion-group--resizable {
 
-			.accordion.is-open {
-
-				.accordion__btn .icon {
-					transform: rotateX(180deg);
-				}
-			}
-
-			.accordion__btn {
-				--_width: 100%;
-				justify-content: space-between;
-				margin-bottom: 0;
-
-				.icon {
-					position: static;
-					transform: initial;
-				}
-			}
-
 			.accordion__body {
 				height: calc(100% - 2rem);
-			}
-
-			.accordion__content {
-				margin-top: 1.25rem;
-				border-top: 1px solid rgba($color: #142E51, $alpha: .1);
-				padding-top: 1.25rem;
 			}
 		}
 	}
@@ -468,6 +475,25 @@
 		&__callback {
 			align-items: center;
 		}
+	}
+
+	// cost
+	.cost-swiper {
+
+		.swiper-slide {
+			width: 25.625rem;
+		}
+	}
+
+	// question
+	.question {
+		grid-template-columns: 1fr;
+	}
+
+	// documents
+	.documents {
+		flex-direction: column;
+		align-items: center;
 	}
 }
 
@@ -733,6 +759,24 @@
 		}
 	}
 
+	.accordion-group--resizable {
+		gap: .625rem;
+
+		.accordion {
+			border-radius: .5rem;
+			padding: var(--container-offset);
+
+			&__btn {
+				font-size: var(--fs-sm);
+			}
+
+			&__content {
+				margin-top: 1rem;
+				padding-top: 1rem;
+			}
+		}
+	}
+
 	// logo
 	.logo {
 		.image {
@@ -868,7 +912,7 @@
 	// insolvency
 	.insolvency {
 		border-radius: var(--radius);
-		padding-block: 1rem;
+		padding-block: 2rem;
 
 		&__header {
 			margin-bottom: 2rem;
@@ -891,6 +935,19 @@
 
 		&__contacts {
 			text-align: center;
+		}
+
+		&__text {
+			display: none;
+			font-size: var(--fs-sm);
+			
+			&:first-child {
+				display: block;
+			}
+		}
+
+		&__link {
+			display: inline-block;
 		}
 	}
 
@@ -1079,28 +1136,15 @@
 
 	// canceled
 	.canceled-group {
-		gap: .625rem;
 
 		&.accordion-group--resizable {
-
-			.accordion__btn {
-				font-size: var(--fs-sm);
-			}
-
 			.accordion__body {
 				height: calc(100% - 1.5rem);
-			}
-
-			.accordion__content {
-				margin-top: 1rem;
-				padding-top: 1rem;
 			}
 		}
 	}
 
 	.canceled {
-		border-radius: .5rem;
-		padding: var(--container-offset);
 
 		&__header,
 		&__list-item {
@@ -1339,6 +1383,109 @@
 					--_i-size: 1.5rem;
 				}
 			}
+		}
+	}
+
+	// list
+	.list-icon {
+		font-size: var(--fs-sm);
+		gap: 1rem;
+
+		li {
+			gap: .625rem;
+		}
+
+		.icon {
+			--_i-size: 1.25rem;
+		}
+	}
+
+	.list-primary {
+		gap: .625rem;
+	}
+
+	// cost
+	.cost-swiper {
+
+		.swiper-slide {
+			width: 13.75rem;
+		}
+	}
+
+	.cost {
+		min-height: 35.625rem;
+		padding: 1.875rem 1rem;
+
+		&__text,
+		&__subtext {
+			font-size: var(--fs-sm);
+		}
+
+		&__text,
+		&__list,
+		&__subtext  {
+			margin-bottom: 1rem;
+		}
+	}
+
+	// documents
+	.documents {
+		font-size: var(--fs-sm);
+
+		li::marker {
+			font-size: var(--fs);
+		}
+
+		&__widget {
+			padding: 1.25rem 1rem;
+		}
+	}
+
+	// question
+	.question {
+
+		&__image {
+			height: 70vw;
+			min-height: 12.5rem;
+			border-radius: var(--radius-sm);
+		}
+
+		&,
+		.accordion-group {
+			gap: .625rem;
+		}
+
+		.accordion {
+			font-size: var(--fs-sm);
+			background-color: var(--background);
+			border-bottom: 0;
+			border-radius: var(--radius-sm);
+			padding: .625rem 1rem;
+
+			&__btn {
+				--_font-size: inherit;
+
+				.icon-group {
+					display: none;
+				}
+			}
+
+			&__content {
+				margin-block: .625rem .375rem;
+				border-top: 1px solid rgba($color: #142E51, $alpha: .1);
+				padding-top: 1rem;
+				padding-left: 0;
+			}
+		}
+	}
+
+	// description
+	.description {
+		font-size: var(--fs-sm);
+		padding-bottom: 2rem;
+
+		&__btn {
+			display: block;
 		}
 	}
 

@@ -1,0 +1,25 @@
+.perks {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.875rem;
+
+	.accordion {
+		background-color: var(--background);
+		border-radius: var(--radius-xxl);
+		padding: 5rem;
+
+		&__btn {
+			--_width: 100%;
+			--_font-size: var(--h3);
+			--_color: var(--secondary-color);
+			--_font-weight: 700;
+
+			font-family: var(--font-title);
+			text-transform: uppercase;
+		}
+
+		&__content {
+			margin-block: 2.5rem 0;
+		}
+	}
+}

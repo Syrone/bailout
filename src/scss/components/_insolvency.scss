@@ -24,6 +24,14 @@
 		margin-bottom: 2.25rem;
 	}
 
+	&__text {
+		font-size: var(--fs-lg);
+
+		& + .insolvency__text {
+			margin-top: 1.875rem;
+		}
+	}
+
 	&__achieved {
 		width: 100%;
 		max-width: 18rem;
@@ -142,5 +150,13 @@
 				--_background-color-focus: var(--secondary-color);
 			}
 		}
+	}
+
+	&__link {
+		--_font-size: var(--fs-sm);
+		--_color: var(--primary-color);
+
+		display: none;
+		margin-top: 1rem;
 	}
 }

@@ -1,0 +1,18 @@
+.documents {
+	display: flex;
+	justify-content: space-between;
+	gap: 1.875rem;
+	font-size: var(--fs-lg);
+
+	&__widget {
+		width: 100%;
+		max-width: 30rem;
+		background-color: var(--background);
+		border-radius: var(--radius-lg);
+		padding: 3.125rem 1.875rem;
+	}
+	
+	&__description {
+		max-width: 46.25rem;
+	}
+}

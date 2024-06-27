@@ -1,0 +1,23 @@
+.description {
+	font-size: var(--fs-lg);
+	padding-bottom: 9.375rem;
+
+	&__content {
+
+		p {
+			
+			&:last-child,
+			&:nth-last-child(2) {
+				display: none;
+			}
+		}
+	}
+
+	&__btn {
+		--_font-weight: 400;
+		--_color: var(--primary-color);
+
+		display: none;
+		margin-top: 1rem;
+	}
+}
